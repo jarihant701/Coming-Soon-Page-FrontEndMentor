@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Josefin Sans", sans-serif;
+        /* overflow: hidden; */
+        display: flex;
+      }
+      .logo-mobile {
+        display: none;
+        width: 26.667vw;
+      }
+      .content {
+        order: 1;
+        width: 57.63vw;
+        height: 100vh;
+        background-image: url(./images/bg-pattern-desktop.svg),
+          linear-gradient(135deg, rgb(255, 255, 255), #fff5f5);
+        float: left;
+        padding-left: 11.458vw;
+        padding-top: 4.514vw;
+      }
+      .logo {
+        margin-bottom: 9.306vw;
+      }
+      .heading {
+        width: 25vw;
+        height: 13.194vw;
+        font-size: 4.514vw;
+        letter-spacing: 1.042vw;
+        font-weight: 400;
+        margin-bottom: 2.778vw;
+      }
+      .heading span {
+        color: hsl(0, 36%, 70%);
+        font-weight: 300;
+      }
+      .content p {
+        width: 29.931vw;
+        height: 5.069vw;
+        font-size: 1.11vw;
+        color: hsl(0, 36%, 70%);
+        font-weight: 400;
+        line-height: 1.736vw;
+        margin-bottom: 3.264vw;
+      }
+      input[type="email"] {
+        width: 27.431vw;
+        height: 3.889vw;
+        border-radius: 30px;
+        font-size: 16px;
+        padding: 15px;
+        background-color: transparent;
+        border: 1px solid hsl(347, 26%, 89%);
+        vertical-align: middle;
+      }
+      .error-icon {
+        background: url(./images/icon-error.svg) no-repeat;
+        background-position: 80%;
+        border: 1px solid hsl(0, 93%, 68%) !important;
+      }
+      input[type="email"]::placeholder {
+        color: hsl(0, 36%, 70%);
+      }
+      input[type="email"]:focus {
+        outline: none;
+      }
+      input[type="image"] {
+        position: relative;
+        left: -4vw;
+        width: 6.944vw;
+        height: 4.306vw;
+        padding: 1.25vw 3.056vw;
+        background-image: linear-gradient(
+          135deg,
+          hsl(0, 80%, 86%),
+          hsl(0, 74%, 74%)
+        );
+        border-radius: 30px;
+        vertical-align: middle;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.2);
+      }
+      input[type="image"]:hover {
+        transform: scale(1.1);
+      }
+      input[type="image"]:focus {
+        outline: none;
+      }
+      .error-message {
+        padding: 10px 30px;
+        color: hsl(0, 93%, 68%);
+        display: none;
+      }
+      .image {
+        order: 2;
+      }
+      .desktop {
+        width: 42.361vw;
+        height: 100vh;
+      }
+      .mobile {
+        display: none;
+      }
+      @media screen and (max-width: 600px) {
+        body {
+          flex-direction: column;
+          height: 100%;
+          flex-wrap: wrap;
+          text-align: center;
+          background-image: linear-gradient(
+            135deg,
+            hsl(0, 0%, 100%),
+            hsl(0, 100%, 98%)
+          );
+        }
+        .logo-mobile {
+          display: block;
+          order: 1;
+          margin: 8.267vw;
+          width: 26.667vw;
+        }
+        .content {
+          /* clear: left; */
+          width: 100%;
+          order: 3;
+          background-image: none;
+          padding: 0px;
+          text-align: center;
+          height: 100vh;
+        }
+        .logo {
+          display: none;
+        }
+        .image {
+          order: 2;
+          height: 100%;
+        }
+        .mobile {
+          display: block;
+          width: 100%;
+          height: 250px;
+        }
+        .desktop {
+          display: none;
+        }
+        .heading {
+          margin: auto;
+          margin-top: 65px;
+          font-size: 50px;
+          height: 120px;
+          width: 234px;
+        }
+        .content p {
+          margin: auto;
+          margin-top: 35px;
+          font-size: 16px;
+          height: 80px;
+          width: 300px;
+          line-height: 20px;
+          margin-bottom: 36px;
+        }
+        input[type="email"] {
+          width: 80%;
+          height: 9.333vw;
+        }
+        input[type="image"] {
+          transform: scale(2.1);
+        }
+        input[type="image"]:hover {
+          transform: scale(2.3);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="logo-mobile" src="./images/logo.svg" alt="" />
+    <div class="content">
+      <img class="logo" src="./images/logo.svg" alt="logo" />
+      <div class="heading"><span>WE'RE</span> COMING SOON</div>
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our
+        launch deals.
+      </p>
+      <input
+        class=""
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email Address"
+        required
+      />
+      <input type="image" src="./images/icon-arrow.svg" alt="" id="button" />
+      <div id="error-message" class="error-message">
+        Please provide a valid Email
+      </div>
+    </div>
+    <div class="image">
+      <img src="./images/hero-desktop.jpg" class="desktop" alt="" />
+      <img src="./images/hero-mobile.jpg" class="mobile" alt="" />
+    </div>
+    <script>
+      document.getElementById("button").onclick = function () {
+        var Email = document.getElementById("email").value;
+        if (
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+            Email
+          )
+        ) {
+          document.getElementById("email").classList.remove("error-icon");
+          document.getElementById("error-message").style.display = "none";
+        } else {
+          document.getElementById("email").classList.add("error-icon");
+          document.getElementById("error-message").style.display = "block";
+        }
+      };
+    </script>
+  </body>
+</html>
